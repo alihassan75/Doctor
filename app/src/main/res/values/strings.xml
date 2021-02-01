@@ -1,0 +1,48 @@
+<resources>
+    <string name="facebook_app_id">5159583514081966</string>
+    <string name="fb_login_protocol_scheme">fb5159583514081966</string>
+    <string name="app_name">Doctor</string>
+    <string name="welcom_to_data_doctor_app" translatable="false">مرحبا بكم في تطبيق بيانات الأطباء </string>
+    <string name="enter_your_password" translatable="false">ادخل رقمك السري </string>
+    <string name="enter_your_email" translatable="false">أدخل بريدك الإلكتروني</string>
+    <string name="login" translatable="false">تسجيل الدخول </string>
+    <string name="forgot_password" translatable="false">هل نسيت كلمة المرور؟</string>
+    <string name="remember_me" translatable="false">تذكرنى</string>
+    <string name="password" translatable="false">كلمه السر</string>
+    <string name="user_name" translatable="false">اسم المستخدم</string>
+    <string name="register_now" translatable="false">سجل الان !</string>
+    <string name="don_t_have_an_account_sing_up" translatable="false">ليس لديك حساب؟ سجل</string>
+    <string name="login_with" translatable="false">تسجيل الدخول باستخدام</string>
+    <string name="already_have_account_sing_in" translatable="false">لديك بالفعل حساب تسجيل الدخول</string>
+    <string name="register" translatable="false">تسجيل</string>
+    <string name="conform_password" translatable="false">تأكيد كلمة المرور</string>
+    <string name="phone_number" translatable="false">رقم الهاتف</string>
+    <string name="email_adresse" translatable="false">عنوان البريد الإلكتروني</string>
+    <string name="full_name" translatable="true">الاسم بالكامل</string>
+    <string name="full_name2" translatable="true">الاسم بالكامل</string>
+    <string name="reset_password2" translatable="true"> بمجرد كتابة البريد الإلكتروني الخاص بالاسترداد والنقر على زر إعادة تعيين كلمة المرور ، ستتلقى بريدًا إلكترونيًا لإعادة تعيين كلمة المرور الخاص </string>
+    <string name="forget_thepassword">هل نسيت الباسورد؟</string>
+    <string name="resertpassword">إعادة تعيين كلمة المرور</string>
+    <string name="todo">TODO</string>
+    <string name="welcome">Welcome</string>
+    <string name="person_position">person_position</string>
+    <string-array name="array_item">
+        <item>اسنان</item>
+        <item>نفسي</item>
+        <item>نساء وتوليد</item>
+        <item>العظام</item>
+        <item>الانف والاذن</item>
+        <item>القلب</item>
+        <item>جلدية</item>
+        <item>جراحة التجميل</item>
+        <item>الجراحة العامة</item>
+        <item>مسالك بولية</item>
+        <item>الغدد الصماء</item>
+        <item>تخاطب</item>
+    </string-array>
+
+    <array name="spinner">
+        <item>Cairo</item>
+        <item>Minya</item>
+    </array>
+</resources>

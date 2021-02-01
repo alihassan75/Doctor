@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/image"
+    android:layout_height="match_parent"
+    tools:context=".DoctorListOfNames">
+
+
+    <!--    <Spinner-->
+    <!--        android:id="@+id/mySpinner"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="@dimen/_30sdp"-->
+    <!--        android:padding="5dp"-->
+    <!--        android:layout_centerHorizontal="true"/>-->
+    <ListView
+        android:id="@+id/myListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

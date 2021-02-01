@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Circular">
+        <item name="cornerSize">@dimen/_50sdp</item>
+    </style>
+    <style name="RoundedSquare">
+        <item name="cornerSize">@dimen/_10sdp</item>
+    </style>
+</resources>
