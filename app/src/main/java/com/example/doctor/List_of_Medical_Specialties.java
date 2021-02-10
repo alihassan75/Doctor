@@ -1,5 +1,6 @@
 package com.example.doctor;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -9,8 +10,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.google.firebase.auth.FirebaseAuth;
+import androidx.appcompat.app.AppCompatDelegate;
 
 public class List_of_Medical_Specialties extends AppCompatActivity {
     //    ListView list_View;
@@ -21,7 +21,7 @@ public class List_of_Medical_Specialties extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_of__medical__specialties);
-
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         listView = findViewById(R.id.listView);
         MyListViewAdapter adapter = new MyListViewAdapter(this, listItem);
         listView.setAdapter(adapter);
@@ -76,15 +76,70 @@ public class List_of_Medical_Specialties extends AppCompatActivity {
         });
     }
 
-    @Override
-    public void onBackPressed() {
-        FirebaseAuth auth;
-        auth = FirebaseAuth.getInstance();
-        auth.signOut();
-        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-        startActivity(intent);
-//                finish();
+//    @Override
+//    public void onBackPressed() {
+//        FirebaseAuth auth;
+//        auth = FirebaseAuth.getInstance();
+//        auth.signOut();
+//        finish();
+//        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+//        startActivity(intent);
 //        super.onBackPressed();
-        finish();
+////        finish();
+//    }
+
+//    @Override
+//    public void onBackPressed() {
+//        AlertDialog.Builder alertdialog=new AlertDialog.Builder(this);
+//        alertdialog.setTitle("تحذير");
+//        alertdialog.setMessage("هل تريد اغلاق التطبيق");
+//        alertdialog.setPositiveButton("نعم", new DialogInterface.OnClickListener(){
+//            @Override
+//            public void onClick(DialogInterface dialog, int which) {
+////                FirebaseDatabase.getInstance().goOffline();
+//                FirebaseAuth auth;
+//                auth = FirebaseAuth.getInstance();
+//                auth.signOut();
+//                System.exit(0);
+//                finish();
+////                Intent intent=new Intent(List_of_Medical_Specialties.this,MainActivity.class);
+////                startActivity(intent);
+////                List_of_Medical_Specialties.this.finish();
+//            }
+//        });
+//
+//        alertdialog.setNegativeButton("لا", new DialogInterface.OnClickListener() {
+//            @Override
+//            public void onClick(DialogInterface dialog, int which) {
+//                dialog.cancel();
+//            }
+//        });
+//
+//        AlertDialog alert=alertdialog.create();
+//        alertdialog.show();
+//
+//    }
+    public abstract static class BaseActivity extends Activity {
+
+        private static BaseActivity lastPausedActivity = null;
+
+        @Override
+        protected void onPause() {
+
+            super.onPause();
+            lastPausedActivity = this;
+        }
+
+        @Override
+        protected void onResume() {
+
+            super.onResume();
+            if(this == lastPausedActivity) {
+                lastPausedActivity = null;
+                Intent intent = new Intent(this, MainActivity.class);
+                intent.setFlags( Intent.FLAG_ACTIVITY_CLEAR_TOP );
+                startActivity( intent );
+            }
+        }
     }
 }
